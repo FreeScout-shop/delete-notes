@@ -1,0 +1,25 @@
+{
+    "name": "freescout/deletenotes",
+    "description": "",
+    "authors": [
+		    {
+			    "name": "FreeScout.shop",
+			    "email": "service@freescout.shop"
+		    }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+	            "AvatarsServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\DeleteNotes\\": ""
+        }
+    }
+}

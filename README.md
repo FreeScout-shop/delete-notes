@@ -116,7 +116,7 @@ To get a local copy up and running follow these simple example steps.
 <!-- CONTACT -->
 ## Contact
 
-[FreeScout.shop](https://freescout.shop) - service@freescout.shop
+[FreeScout.shop](freescout.shop) - service@freescout.shop
 
 Download Link: [https://freescout.shop/downloads/freescout-module-delete-notes/](https://freescout.shop/downloads/freescout-module-delete-notes/)
 

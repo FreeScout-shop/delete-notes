@@ -103,7 +103,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Download the module file (for free) from [https://freescout.shop](https://freescout.shop/downloads/freescout-module-delete-notes/)
+1. Download the module file (for free) from <kbd><strong>[FreeScout.shop](https://freescout.shop/downloads/freescout-module-delete-notes/)</strong></kbd>
 2. Open the FreeScout `Modules` folder, usually located at `/var/www/html/Modules`
 3. Unzip the downloaded module file into the `/Modules` folder
 4. Remove the ZIP file
@@ -113,10 +113,11 @@ To get a local copy up and running follow these simple example steps.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+
 <!-- CONTACT -->
 ## Contact
 
-[FreeScout.shop](freescout.shop) - service@freescout.shop
+[FreeScout.shop](https://freescout.shop) - service@freescout.shop
 
 Download Link: [https://freescout.shop/downloads/freescout-module-delete-notes/](https://freescout.shop/downloads/freescout-module-delete-notes/)
 

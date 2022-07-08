@@ -93,8 +93,7 @@ And after a simple prompt - who would've guessed - the note is gone for good.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+TLDR; unpack [Module ZIP](https://freescout.shop/downloads/freescout-module-delete-notes/) into `/Module` folder.
 
 ### Prerequisites
 

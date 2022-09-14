@@ -9,7 +9,7 @@ function clickDeleteNote(thread_id){
         modal.modal('hide')
         fsAjax(
           {thread_id},
-          laroute.route('deletenotes.delete', {thread_id: 139360}),
+          laroute.route('deletenotes.delete'),
           function(response) {
             showAjaxResult(response)
             $('#thread-'+thread_id).remove()

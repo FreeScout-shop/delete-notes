@@ -6,7 +6,7 @@ use App\Thread;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use Modules\DeleteNotes\Providers\AvatarsServiceProvider;
+use Modules\DeleteNotes\Providers\DeleteNotesServiceProvider;
 
 class DeleteNotesController extends Controller
 {
@@ -23,7 +23,7 @@ class DeleteNotesController extends Controller
 
         $thread = Thread::find($request->thread_id ?? 0);
         if ($thread) {
-            if (AvatarsServiceProvider::canDeleteNote($thread)) {
+            if (DeleteNotesServiceProvider::canDeleteNote($thread)) {
                 $thread->delete();
                 $response['status'] = 'success';
                 $response['msg_success'] = __('Deleted note');

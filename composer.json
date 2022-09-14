@@ -1,6 +1,6 @@
 {
     "name": "freescout/deletenotes",
-    "description": "",
+    "description": "Let users delete their own notes.",
     "authors": [
 		    {
 			    "name": "FreeScout.shop",
@@ -10,7 +10,7 @@
     "extra": {
         "laravel": {
             "providers": [
-	            "AvatarsServiceProvider"
+	            "DeleteNotesServiceProvider"
             ],
             "aliases": {
                 

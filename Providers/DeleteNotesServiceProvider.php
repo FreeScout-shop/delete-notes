@@ -4,7 +4,6 @@ namespace Modules\DeleteNotes\Providers;
 
 use App\Thread;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\Eloquent\Factory;
 
 // Module alias.
 define('DN_MODULE', 'deletenotes');
@@ -29,9 +28,6 @@ class DeleteNotesServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerConfig();
-        $this->registerViews();
-        $this->registerFactories();
-        $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
         $this->hooks();
     }
 
@@ -40,6 +36,14 @@ class DeleteNotesServiceProvider extends ServiceProvider
      */
     public function hooks()
     {
+        // JS messages
+        \Eventy::addAction('js.lang.messages', function() {
+            ?>
+			    "delete": "<?php echo __("Delete") ?>",
+			    "confirm_delete_note": "<?php echo __("Delete this note?") ?>",
+            <?php
+        });
+
         // Add module's JS file to the application layout.
         \Eventy::addFilter('javascripts', function($javascripts) {
             $javascripts[] = \Module::getPublicPath(DN_MODULE).'/js/laroute.js';
@@ -48,12 +52,12 @@ class DeleteNotesServiceProvider extends ServiceProvider
         });
 
         \Eventy::addFilter('user_permissions.list', function($list) {
-            $list[] = AvatarsServiceProvider::PERM_DELETE_NOTE;
+            $list[] = DeleteNotesProvider::PERM_DELETE_NOTE;
             return $list;
         });
 
         \Eventy::addFilter('user_permissions.name', function($name, $permission) {
-            if ($permission != AvatarsServiceProvider::PERM_DELETE_NOTE) {
+            if ($permission != DeleteNotesServiceProvider::PERM_DELETE_NOTE) {
                 return $name;
             }
             return __('Users are allowed to delete their own notes');
@@ -61,19 +65,11 @@ class DeleteNotesServiceProvider extends ServiceProvider
 
         // Show menu item.
         \Eventy::addAction('thread.menu', function($thread) {
-            if (AvatarsServiceProvider::canDeleteNote($thread)) { ?>
+            if (DeleteNotesServiceProvider::canDeleteNote($thread)) { ?>
 					    <li>
 						    <a href="#" onclick="clickDeleteNote(<?php echo $thread->id ?>)"><?php echo __("Delete") ?></a>
 					    </li><?php
             }
-        });
-
-        // JS messages
-        \Eventy::addAction('js.lang.messages', function() {
-            ?>
-			    "delete": "<?php echo __("Delete") ?>",
-			    "confirm_delete_note": "<?php echo __("Delete this note?") ?>",
-            <?php
         });
     }
 
@@ -93,7 +89,7 @@ class DeleteNotesServiceProvider extends ServiceProvider
 
 			if ($user->isAdmin() || (
 				\Auth::user()->can('edit', $thread)
-				&& $user->hasPermission(AvatarsServiceProvider::PERM_DELETE_NOTE)
+				&& $user->hasPermission(DeleteNotesServiceProvider::PERM_DELETE_NOTE)
 			)) {
 				return true;
       }
@@ -127,26 +123,6 @@ class DeleteNotesServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register views.
-     *
-     * @return void
-     */
-    public function registerViews()
-    {
-        $viewPath = resource_path('views/modules/deletenotes');
-
-        $sourcePath = __DIR__.'/../Resources/views';
-
-        $this->publishes([
-            $sourcePath => $viewPath
-        ],'views');
-
-        $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/deletenotes';
-        }, \Config::get('view.paths')), [$sourcePath]), 'deletenotes');
-    }
-
-    /**
      * Register translations.
      *
      * @return void
@@ -154,17 +130,6 @@ class DeleteNotesServiceProvider extends ServiceProvider
     public function registerTranslations()
     {
         $this->loadJsonTranslationsFrom(__DIR__ .'/../Resources/lang');
-    }
-
-    /**
-     * Register an additional directory of factories.
-     * @source https://github.com/sebastiaanluca/laravel-resource-flow/blob/develop/src/Modules/ModuleServiceProvider.php#L66
-     */
-    public function registerFactories()
-    {
-        if (! app()->environment('production')) {
-            app(Factory::class)->load(__DIR__ . '/../Database/factories');
-        }
     }
 
     /**

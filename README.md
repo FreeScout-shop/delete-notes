@@ -93,8 +93,7 @@ And after a simple prompt - who would've guessed - the note is gone for good.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+TLDR; unpack [Module ZIP](https://freescout.shop/downloads/freescout-module-delete-notes/) into `/Module` folder.
 
 ### Prerequisites
 
@@ -103,7 +102,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Download the module file (for free) from [https://freescout.shop](https://freescout.shop/downloads/freescout-module-delete-notes/)
+1. Download the module file (for free) from <kbd><strong>[FreeScout.shop](https://freescout.shop/downloads/freescout-module-delete-notes/)</strong></kbd>
 2. Open the FreeScout `Modules` folder, usually located at `/var/www/html/Modules`
 3. Unzip the downloaded module file into the `/Modules` folder
 4. Remove the ZIP file
@@ -112,6 +111,7 @@ To get a local copy up and running follow these simple example steps.
 7. Clear the FreeScout cache via `Manage` > `System` > `Tools` > `Clear cache`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- CONTACT -->

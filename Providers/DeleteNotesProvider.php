@@ -6,7 +6,7 @@ use App\Thread;
 use Illuminate\Support\ServiceProvider;
 
 // Module alias.
-// define('DN_MODULE', 'deletenotes'); (already defined)
+// define('DN_MODULE', 'deletenotes'); // already defined
 
 class DeleteNotesProvider extends ServiceProvider
 {

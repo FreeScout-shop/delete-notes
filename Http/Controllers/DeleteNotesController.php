@@ -35,7 +35,11 @@ class DeleteNotesController extends Controller
                         'source_type'   => Thread::SOURCE_TYPE_WEB,
                     ]);
                 }
+
                 $thread->delete();
+
+                $thread->conversation->setPreview();
+                $thread->conversation->save();
 
                 $response['status'] = 'success';
                 $response['msg_success'] = __('Deleted note');

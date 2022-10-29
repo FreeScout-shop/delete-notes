@@ -52,7 +52,7 @@ class DeleteNotesServiceProvider extends ServiceProvider
         });
 
         \Eventy::addFilter('user_permissions.list', function($list) {
-            $list[] = DeleteNotesProvider::PERM_DELETE_NOTE;
+            $list[] = DeleteNotesServiceProvider::PERM_DELETE_NOTE;
             return $list;
         });
 

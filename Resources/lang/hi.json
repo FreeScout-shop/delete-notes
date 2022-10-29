@@ -1,5 +1,7 @@
 {
 	"Delete": "मिटाना",
 	"Delete this note?": "यह नोट हटाएं?",
-	"Deleted note": "हटाया गया नोट"
+	"Deleted note": "हटाया गया नोट",
+	"Users are allowed to delete their own notes": "उपयोगकर्ताओं को अपने स्वयं के नोटों को हटाने की अनुमति है",
+	":user has deleted a note": ":user ने एक नोट हटा दिया है"
 }

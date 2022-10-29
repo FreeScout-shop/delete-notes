@@ -1,5 +1,7 @@
 {
 	"Delete": "Borrar",
 	"Delete this note?": "¿Eliminar esta nota?",
-	"Deleted note": "Nota eliminada"
+	"Deleted note": "Nota eliminada",
+	"Users are allowed to delete their own notes": "Los usuarios pueden eliminar sus propias notas.",
+	":user has deleted a note": ":user ha borrado una nota"
 }

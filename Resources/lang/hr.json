@@ -1,5 +1,7 @@
 {
 	"Delete": "Izbrisati",
 	"Delete this note?": "Izbrisati ovu bilješku?",
-	"Deleted note": "Bilješka je izbrisana"
+	"Deleted note": "Bilješka je izbrisana",
+	"Users are allowed to delete their own notes": "Korisnicima je dopušteno brisanje vlastitih bilješki",
+	":user has deleted a note": ":user je izbrisao bilješku"
 }

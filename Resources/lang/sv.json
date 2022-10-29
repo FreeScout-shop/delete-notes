@@ -1,5 +1,7 @@
 {
 	"Delete": "Radera",
 	"Delete this note?": "Vill du ta bort den här anteckningen?",
-	"Deleted note": "Raderad anteckning"
+	"Deleted note": "Raderad anteckning",
+	"Users are allowed to delete their own notes": "Användare får ta bort sina egna anteckningar",
+	":user has deleted a note": ":user har tagit bort en anteckning"
 }

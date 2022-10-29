@@ -1,5 +1,7 @@
 {
 	"Delete": "Odstrániť",
 	"Delete this note?": "Odstrániť túto poznámku?",
-	"Deleted note": "Poznámka vymazaná"
+	"Deleted note": "Poznámka vymazaná",
+	"Users are allowed to delete their own notes": "Používatelia môžu mazať svoje vlastné poznámky",
+	":user has deleted a note": ":user vymazal poznámku"
 }

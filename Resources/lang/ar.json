@@ -1,5 +1,7 @@
 {
 	"Delete": "حذف",
 	"Delete this note?": "حذف هذه الملاحظة؟",
-	"Deleted note": "ملاحظة محذوفة"
+	"Deleted note": "ملاحظة محذوفة",
+	"Users are allowed to delete their own notes": "يسمح للمستخدمين بحذف ملاحظاتهم الخاصة",
+	":user has deleted a note": ":user حذف ملاحظة"
 }

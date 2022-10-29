@@ -1,5 +1,7 @@
 {
 	"Delete": "Удалить",
 	"Delete this note?": "Удалить эту заметку?",
-	"Deleted note": "Примечание удалено"
+	"Deleted note": "Примечание удалено",
+	"Users are allowed to delete their own notes": "Пользователи могут удалять свои заметки",
+	":user has deleted a note": ":user удалил заметку"
 }

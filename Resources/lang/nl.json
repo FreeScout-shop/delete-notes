@@ -1,5 +1,7 @@
 {
 	"Delete": "Verwijderen",
 	"Delete this note?": "Deze notitie verwijderen?",
-	"Deleted note": "Notitie verwijderd"
+	"Deleted note": "Notitie verwijderd",
+	"Users are allowed to delete their own notes": "Gebruikers mogen hun eigen notities verwijderen",
+	":user has deleted a note": ":user heeft een notitie verwijderd"
 }

@@ -1,5 +1,7 @@
 {
 	"Delete": "消去",
 	"Delete this note?": "このメモを削除しますか？",
-	"Deleted note": "削除されたメモ"
+	"Deleted note": "削除されたメモ",
+	"Users are allowed to delete their own notes": "ユーザーは自分のメモを削除できます",
+	":user has deleted a note": ":user がメモを削除しました"
 }

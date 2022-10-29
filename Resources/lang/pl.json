@@ -1,5 +1,7 @@
 {
 	"Delete": "Usunąć",
 	"Delete this note?": "Usunąć tę notatkę?",
-	"Deleted note": "Notatka usunięta"
+	"Deleted note": "Notatka usunięta",
+	"Users are allowed to delete their own notes": "Użytkownicy mogą usuwać własne notatki",
+	":user has deleted a note": ":user usunął notatkę"
 }

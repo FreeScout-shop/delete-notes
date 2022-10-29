@@ -1,5 +1,7 @@
 {
 	"Delete": "删除",
 	"Delete this note?": "删除这条笔记？",
-	"Deleted note": "删除的笔记"
+	"Deleted note": "删除的笔记",
+	"Users are allowed to delete their own notes": "允许用户删除自己的笔记",
+	":user has deleted a note": ":user 删除了一条笔记"
 }

@@ -77,6 +77,14 @@ When the permission is granted, a new entry in the thread dropdown menu will app
 
 And after a simple prompt - who would've guessed - the note is gone for good.
 
+Other users will see an action text, informing them about the deletion and date:
+
+
+<p align="center">
+<img class="wp-image-1134 size-full" src="http://freescout.shop/wp-content/uploads/edd/2022/10/screen.action.png" alt="A FreeScout note with the dropdown menu opened, displaying a new option to delete the note." width="785" height="165" />
+<br/><small><em>When an admin deletes a note, the action text is omitted.</em></small>
+</p>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 

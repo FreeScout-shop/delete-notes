@@ -2,7 +2,7 @@
 	"name": "Delete Notes",
 	"alias": "deletenotes",
 	"description": "Let users delete their own notes.",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"detailsUrl": "https://freescout.shop/downloads/freescout-module-delete-notes",
 	"author": "FreeScout.shop <service@freescout.shop>",
 	"authorUrl": "https://freescout.shop",

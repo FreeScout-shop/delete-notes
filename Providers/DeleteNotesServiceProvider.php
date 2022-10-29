@@ -3,6 +3,7 @@
 namespace Modules\DeleteNotes\Providers;
 
 use App\Thread;
+use App\User;
 use Illuminate\Support\ServiceProvider;
 
 // Module alias.
@@ -19,6 +20,9 @@ class DeleteNotesServiceProvider extends ServiceProvider
 
     // User permission.
     const PERM_DELETE_NOTE = 18;
+
+    // Action type.
+    const ACTION_TYPE_DELETE = 183;
 
     /**
      * Boot the application events.
@@ -71,6 +75,22 @@ class DeleteNotesServiceProvider extends ServiceProvider
 					    </li><?php
             }
         });
+
+        // Show action description for the line item thread.
+        \Eventy::addFilter('thread.action_text', function($did_this, $thread, $conversation_number, $escape) {
+            switch($thread->action_type) {
+                case self::ACTION_TYPE_DELETE:
+                  $user = User::find($thread->user_id)->getFullName();
+                  if ($escape) {
+                      $user = htmlspecialchars($user);
+                  }
+									$did_this = __(':user has deleted a note', [
+                    'user' => $user
+									]);
+                  break;
+            }
+            return $did_this;
+        }, 20, 4);
     }
 
     public static function canDeleteNote($thread, $user = null)

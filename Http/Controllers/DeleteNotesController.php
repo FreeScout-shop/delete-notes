@@ -23,8 +23,20 @@ class DeleteNotesController extends Controller
 
         $thread = Thread::find($request->thread_id ?? 0);
         if ($thread) {
-            if (DeleteNotesServiceProvider::canDeleteNote($thread)) {
+            $user = auth()->user();
+
+            if (DeleteNotesServiceProvider::canDeleteNote($thread, $user)) {
+                if (!$user->isAdmin()){
+                    Thread::create($thread->conversation, Thread::TYPE_LINEITEM, '', [
+                        'user_id'       => $user->id,
+                        'created_by_customer_id' => $thread->conversation->customer_id,
+                        'action_type' => DeleteNotesServiceProvider::ACTION_TYPE_DELETE,
+                        'source_via'    => Thread::PERSON_USER,
+                        'source_type'   => Thread::SOURCE_TYPE_WEB,
+                    ]);
+                }
                 $thread->delete();
+
                 $response['status'] = 'success';
                 $response['msg_success'] = __('Deleted note');
             } else {
